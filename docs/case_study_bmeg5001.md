@@ -1,4 +1,4 @@
-# Case study: BMEG5001 2026 scaffold experiment
+# Case study: UWA BMEG5001 2026 scaffold experiment
 
 ## Data
 
@@ -64,23 +64,3 @@ Interpretation:
 3. Elongated cells align with the local fibre axis: alignment index A = ⟨cos 2Δθ⟩ = 0.43 ± 0.04 (GS) and
    0.63 ± 0.03 (S), both P < 10⁻⁶ against 0. Alignment increases with elongation (per-image Spearman ρ of AR vs |Δθ|:
    GS −0.29 ± 0.04, S −0.39 ± 0.02).
-
-## Figure legends (drafts)
-
-**Fig. 1 | Scaffold fibres increase cell elongation.** Cell aspect ratio (major/minor axis of the moment-equivalent
-ellipse of the xy-projected 3D cell mask) of HeLa (a) and HEK (b) cells in G, GS and S constructs. Each point is the
-median of one image (one construct per team); only images with ≥ 10 included cells are shown. Boxes: median and IQR;
-whiskers: most extreme value within 1.5 × IQR. *P*: two-sided, Holm-adjusted scaffold contrasts within each cell line
-from a two-way ANOVA on log AR (scaffold × cell line, team as blocking factor).
-
-**Fig. 2 | Elongated cells and nuclei align with the local fibre direction.** (a,b) Distribution of the angle between
-the long axis of elongated (AR > 1.5) nuclei (a) or cells (b) and the local fibre axis in GS and S constructs; objects
-≤ 10 µm from a fibre where the structure-tensor coherence is ≥ 0.6. Points: mean ± s.e.m. of per-image 10° histograms;
-dotted line: random expectation (11.1 % per bin). (c,d) Per-image median angle; dotted line: 45° (random). *P*: two-sided
-one-sample Wilcoxon signed-rank tests against 45°.
-
-**Fig. 3 | Cells align with the local fibre axis.** Signed angle Δθ (cell − fibre axis) of elongated cells in GS (a)
-and S (b). Bars: mean ± s.e.m. of per-image histograms; dashed line: random expectation.
-
-**Fig. 4 | Alignment increases with cell elongation.** (a,b) Distribution of Δθ within each cell-AR class; colour:
-percentage of cells in that class. (c) Per-image median |Δθ| per AR class; black bars, mean ± s.e.m.; dotted line, 45°.
