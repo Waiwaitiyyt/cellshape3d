@@ -1,0 +1,26 @@
+# Minimal template. Every key is optional; defaults are listed in src/cellshape3d/config.py.
+
+[data]
+raw_dir = "data/raw"                 # folder searched with `glob`
+out_dir = "results"
+glob = "**/*.tif"
+# Regex searched in each file stem. Required named groups: group, cell_line. Optional: team (block / replicate).
+# Example stem: "exp1_Matrigel-MCF7-R3_001"  ->  group=Matrigel, cell_line=MCF7, team=3
+name_pattern = '(?P<group>[A-Za-z]+)-(?P<cell_line>[A-Za-z0-9]+)-R(?P<team>\d+)'
+
+[acquisition]
+px_xy_um = 0.63     # raw xy pixel size (um)
+dz_um = 3.16        # z-step (um)
+bin = 2             # xy binning before segmentation
+ch_dapi = 0
+ch_actin = 1
+ch_tl = -1          # no transmitted-light channel -> fibre analysis is skipped
+
+[design]
+groups = ["Control", "Matrigel"]     # first = reference level
+fibre_groups = []
+cell_lines = ["MCF7"]
+block = "team"                       # or "" to disable
+
+[nuclei]
+method = "classical"                 # "stardist" needs `pip install cellshape3d[stardist]`

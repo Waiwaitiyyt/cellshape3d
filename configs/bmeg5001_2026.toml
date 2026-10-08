@@ -1,0 +1,29 @@
+# BMEG5001 2026: HEK / HeLa in GelMA (G), GelMA-infused PCL scaffold (GS) and PCL scaffold (S).
+# Leica, HC PL APO 10x/0.40 dry, zoom 1.8, 405 + 543 nm excitation, HyD photon counting.
+# Paths are relative to this file; this assumes the repo sits next to the "2026 Confocal data" folder.
+
+[data]
+raw_dir = "../../2026 Confocal data"     # <group dir>/<cell line>/2026-BMEG5001_2026-G-HEK-G10_001.tif
+out_dir = "../results"
+glob = "*/*/*.tif"
+name_pattern = '(?P<group>GS|G|S)-(?P<cell_line>HEK|HeLa)-G(?P<team>\d+)_\d+'
+
+[acquisition]
+px_xy_um = 0.63
+dz_um = 3.16          # not stored in the exported TIFF metadata
+bin = 2
+ch_dapi = 0           # C1 HyD 430-520 nm
+ch_actin = 1          # C2 HyD 550-700 nm, rhodamine-phalloidin
+ch_tl = 2             # C3 transmitted light (-1 if absent)
+
+[design]
+groups = ["G", "GS", "S"]
+fibre_groups = ["GS", "S"]
+cell_lines = ["HEK", "HeLa"]
+block = "team"
+
+[nuclei]
+method = "stardist"   # "classical" if TensorFlow is not available (weaker in GelMA haze)
+
+[report]
+panel_cell_lines = ["HeLa", "HEK"]
